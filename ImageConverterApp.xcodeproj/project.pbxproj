@@ -12,7 +12,24 @@
 		999CE8921CD8FE2D0027481E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999CE8901CD8FE2D0027481E /* Main.storyboard */; };
 		999CE8941CD8FE2D0027481E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 999CE8931CD8FE2D0027481E /* Assets.xcassets */; };
 		999CE8971CD8FE2D0027481E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999CE8951CD8FE2D0027481E /* LaunchScreen.storyboard */; };
+		999CE8A61CD904160027481E /* ImageProcessor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999CE8A51CD904160027481E /* ImageProcessor.framework */; };
+		999CE8A71CD904660027481E /* ImageProcessor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999CE8A51CD904160027481E /* ImageProcessor.framework */; };
+		999CE8A81CD904660027481E /* ImageProcessor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 999CE8A51CD904160027481E /* ImageProcessor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		999CE8A41CD901C80027481E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				999CE8A81CD904660027481E /* ImageProcessor.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		999CE8891CD8FE2D0027481E /* ImageConverterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageConverterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +39,7 @@
 		999CE8931CD8FE2D0027481E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		999CE8961CD8FE2D0027481E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		999CE8981CD8FE2D0027481E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		999CE8A51CD904160027481E /* ImageProcessor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImageProcessor.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999CE8A61CD904160027481E /* ImageProcessor.framework in Frameworks */,
+				999CE8A71CD904660027481E /* ImageProcessor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +60,7 @@
 			children = (
 				999CE88B1CD8FE2D0027481E /* ImageConverterApp */,
 				999CE88A1CD8FE2D0027481E /* Products */,
+				999CE8A51CD904160027481E /* ImageProcessor.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +95,7 @@
 				999CE8851CD8FE2D0027481E /* Sources */,
 				999CE8861CD8FE2D0027481E /* Frameworks */,
 				999CE8871CD8FE2D0027481E /* Resources */,
+				999CE8A41CD901C80027481E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +273,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ImageConverterApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = by.stormnet.ImageConverterApp;
@@ -262,6 +288,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ImageConverterApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = by.stormnet.ImageConverterApp;
